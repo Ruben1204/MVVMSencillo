@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:System="clr-namespace:System;assembly=netstandard"
+             xmlns:local="clr-namespace:MVVMSencillo"
+             x:Class="MVVMSencillo.MainPage">
+    <ContentPage.BindingContext>
+        <local:RelojViewModel/>
+    </ContentPage.BindingContext>
+   
+    <!--<VerticalStackLayout BindingContext="{x:Static System:DateTime.Now}" Spacing="25" Padding="30,0"
+                         VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="{Binding Year , StringFormat='El año es {0}'}"/>
+        <Label Text="{Binding StringFormat='El mes es {0:MMMM}'}"/>
+    </VerticalStackLayout>-->
+    <Label Text="{Binding DateTime.Second, StringFormat='{0:T}'}"
+           FontSize="18"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"/>
+
+</ContentPage>
